@@ -11,6 +11,6 @@ const cekElemen = new IntersectionObserver(elemenSingDicek => {
             document.querySelector(".rs").classList.add("fadeInRight");
         }
     })
-})
+});
 
 cekElemen.observe(document.querySelector(".resep"));
