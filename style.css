@@ -84,11 +84,11 @@ body{
     cursor: pointer;
     color: yellow;
 }
-#menu{
+/* #menu{
     position: relative;
-    /* margin-top: 0.3rem; */
+    margin-top: 0.3rem;
     margin-left: 0.5rem;
-}
+} */
 .landing-page-msg{
     min-height: 100vh;
     display: flex;
@@ -235,24 +235,38 @@ body{
     html {
         font-size: 70%;
     }
+    .navbar{
+        position: relative;
+    }
     #menu{
         display: inline-block;
+        position: absolute;
+        margin-left: 1rem;
+    }
+    .additional{
+        transform: translateX(-15%);
+        font-size: 1.2rem;
+    }
+    .navbar{
+        z-index: 2;
     }
     .navbar-nav{
         position: absolute;
         right: -100%;
-        margin-top: 60.3rem;
+        top: 0;
         background-color: white;
         width: 15rem;
         height: 100vh;
-        z-index: 9999;
-        transition: 0.4s;
+        z-index: 1;
+        display: none;
     }
     .navbar .navbar-nav a{
         padding: 0.5rem;
     }
     .navbar-nav.menu-active{
         right: 0;
+        display: inline;
+        transform: translateY(6.5%);
     }
     .navbar .navbar-nav a{
         display: block;
