@@ -260,7 +260,7 @@ body{
     .navbar-nav{
         position: absolute;
         right: -100%;
-        top: 0;
+        top: 62px;
         background-color: white;
         width: 15rem;
         height: 100vh;
@@ -273,7 +273,7 @@ body{
     .navbar-nav.menu-active{
         right: 0;
         display: inline;
-        transform: translateY(10%);
+        /* transform: translateY(10%); */
     }
     .navbar .navbar-nav a{
         display: block;
