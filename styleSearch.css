@@ -1,0 +1,314 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap');
+
+:root{
+    --bg : rgb(250, 246, 246);
+    --content-bg : rgb(231, 225, 225);
+    --navbar-color : rgb(250, 208, 208);
+    --navbar-font-clr : rgb(172, 171, 171);
+    --navbar-color-on-hover : rgb(128, 117, 117);
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body{
+    min-height: 800px;
+    /* background-color: var(--content-bg); */
+    background-image: url(Assets/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+}
+.logo img{
+    height: auto;
+    max-width: 9rem;
+}
+.navbar{
+    color: var(--navbar-font-clr);
+    display: flex;
+    padding: 0.5rem 3%;
+    background-color: var(--navbar-color);
+    justify-content: space-between;
+    align-items: center;
+}
+.accountInfo .additional p{
+    display: inline-block;
+}
+.accountInfo{
+    display: flex;
+}
+.logo{
+    font-size: 1.8rem;
+    color: var(--navbar-font-clr);
+}
+.navbar .navbar-nav a{
+    display: inline-block;
+    margin: 0 16px;
+    color: var(--navbar-font-clr);
+    padding: 10px 5px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+}
+.navbar .navbar-nav a:hover{
+    color: var(--navbar-color-on-hover);
+    transition: 0.5s ease-out;
+    letter-spacing: 2px;
+}
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.1rem solid var(--navbar-color-on-hover);
+    transform: scaleX(0);
+    transition: 0.2s;
+}
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(1);
+}
+.dropdown-content-about{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    max-width: 12rem;
+    transform: translateX(130%);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content-about a{
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown{
+    overflow: hidden;
+    display: inline;
+}
+.dropdown:hover .dropdown-content-about{
+    display: block;
+}
+.signIN{
+    color: var(--navbar-font-clr);
+    margin-left: 0.5rem;
+    margin-right: 0.8rem;
+}
+.signIN:hover{
+    cursor: pointer;
+    color: rgb(47, 0, 255);
+}
+.signUp{
+    display: inline;
+    color: white;
+    background-color: green;
+    width: 6rem;
+    height: 2.5rem;
+    margin-left: 0.7rem;
+    border: 1px solid wheat;
+}
+.signUp:hover{
+    cursor: pointer;
+    color: yellow;
+}
+.main-container{
+    position: absolute;
+    width: 60%;
+    top: 28%;
+    left: 20%;
+    background-color: #fafafa;
+    padding-bottom: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 25px 30px 55px #5557;
+}
+.basic-search{
+    display: flex;
+    top: 0;
+    height: 5rem;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid blue;
+}
+.basic-search input{
+    padding: 0rem 2rem;
+    font-size: large;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.basic-search label{
+    margin-right: 3rem;
+}
+.advanced-search{
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.advanced-search h3{
+    color: gray;
+}
+.advanced-search table{
+    font-size: medium;
+    width: 100%;
+    border: none;
+}
+.advanced-search table td, th{
+    padding: 1rem;
+    text-align: left;
+}
+.advanced-search input{
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.advanced-search select{
+    font-size: medium;
+    border: 0.5px solid gray;
+    outline: none;
+    padding: 0.2rem;
+    background-color: transparent;
+}
+.category-container input{
+    font-size: medium;
+    margin-bottom: 1.5rem;
+}
+.add-category{
+    padding: 0.5rem 1rem;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.add-category:hover{
+    box-shadow: inset 0 -2.5rem 0 0 lightgreen;
+    transition: 0.2s ease-in-out;
+    color: black;
+}
+.buttons{
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+.buttons button{
+    padding: 0.5rem;
+    width: 7rem;
+    cursor: pointer;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    color: gray;
+}
+.buttons .reset{
+    background-color: #fafafa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.buttons .reset:hover{
+    color: black;
+}
+.buttons .cari{
+    background-color: rgb(160, 88, 226);
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 2px 5px 7px #5557;
+}
+.buttons .cari:hover{
+    background-color: blueviolet;
+}
+
+
+
+@media (max-width: 1366px){
+    html {
+        font-size: 90%;
+    }
+    #menu{
+        display: none;
+    }
+}
+@media (max-width: 785px){
+    html {
+        font-size: 70%;
+    }
+    .hero{
+        font-size: 100%;
+    }
+    .navbar{
+        position: relative;
+    }
+    #menu{
+        display: inline-block;
+        position: absolute;
+        margin-left: 1rem;
+    }
+    .additional{
+        transform: translateX(-15%);
+        font-size: 1.2rem;
+    }
+    .navbar{
+        z-index: 2;
+    }
+    .navbar-nav{
+        position: absolute;
+        right: -100%;
+        top: 0;
+        background-color: white;
+        width: 15rem;
+        height: 100vh;
+        z-index: 1;
+        display: none;
+    }
+    .navbar .navbar-nav a{
+        padding: 0.5rem;
+    }
+    .navbar-nav.menu-active{
+        right: 0;
+        display: inline;
+        transform: translateY(10%);
+    }
+    .navbar .navbar-nav a{
+        display: block;
+        margin-bottom: 0.5rem;
+        margin-left: 1.5rem;
+        margin-top: 1.5rem;
+        color: var(--navbar-font-clr);
+        font-size: 1.2rem;
+    }
+    .dropdown-content-about{
+        position: absolute;
+        transform: translateX(20%);
+        transform: translateY(-5%);
+        margin-left: 2rem;
+    }
+    .main-container{
+        position: absolute;
+        width: 90%;
+        left: 5%;
+    }
+    .main-container form, label{
+        font-size: small;
+    }
+    .main-container select{
+        font-size: small;
+    }
+    .main-container button{
+        font-size: 90%;
+    }
+    .main-container .add-category{
+        font-size: 70%;
+    }
+}
+@media (max-width: 479px){
+    html {
+        font-size: 55%;
+    }
+}

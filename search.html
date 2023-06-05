@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+    <link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <link rel="stylesheet" href="styleSearch.css">
+  
+    <title>Mau masak apa hari ini?</title>
+  
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="Assets/v2-removebg-preview.png" alt=""></a>
+
+        <div class="navbar-nav">
+            <a href="index.html#home">Home</a>
+            <a href="#searchForm">Cari Resep</a>
+            <div class="dropdown">
+                <a href="#about" class="about">Tentang Kami</a>
+                <div class="dropdown-content-about">
+                    <a href="aboutUs.html#tujuan-website">Tujuan Website</a>
+                    <a href="aboutUs.html#dev-profile">Profil Pengembang</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accountInfo">
+            <div class="additional">
+                <p>Sudah Punya Akun?</p><a href="loginPage.html" class="signIN">Sign In</a>
+                <a href="signUpPage.html"><button class="signUp">Sign Up</button></a>
+                <a href="#" id="menu"><i data-feather="menu"></i></a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <form action="" id="searchForm">
+            <div class="basic-search">
+                <input type="search" name="" id="search" placeholder="Masukkan nama masakan...">
+                <label for="search"><i data-feather="search"></i></label>
+            </div>
+
+            <div class="advanced-search">
+                <h3>PENCARIAN LANJUTAN</h3>
+
+                <table>
+                    <tr>
+                        <td><label for="kategori">Pilih Kategori</label></td>
+                        <td>
+                            <select name="kategori" id="kategori">
+                                <option value="kabeh">All</option>
+                                <option value="desert">Desert</option>
+                                <option value="breakfast">Menu sarapan</option>
+                                <option value="lunch">Menu makan siang</option>
+                                <option value="dinner">Menu makan malam</option>
+                            </select>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="bahan">Pilih Bahan</label></td>
+                        <td>
+                            <div class="category-container" id="categoryContainer">
+                                <div class="category-input">
+                                    <input type="text" name="categories" placeholder="Masukkan bahan makanan" id="bahan">
+                                </div>
+                            </div>
+                            <button type="button" class="add-category" onclick="addCategory()">Tambah Bahan</button>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="sort">Urutkan Berdasarkan</label></td>
+                        <td>
+                            <select name="sort-value" id="sort">
+                                <option value="most-viewed">Paling banyak dilihat</option>
+                                <option value="most-commented">Paling banyak dikomentari</option>
+                                <option value="relevancy">Relevansi</option>
+                                <option value="date-posted">Tanggal di-post</option>
+                                <option value="title">Nama Masakan</option>
+                            </select>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="sort-direction">Sort Direction</label></td>
+                        <td>
+                            <select name="sort-direction" id="sort-direction">
+                                <option value="ascending">Ascending (oldest first)</option>
+                                <option value="descending">Descending (newest first)</option>
+                            </select>
+                        </td>
+                    </tr>
+        
+                </table>
+            </div>
+
+            <div class="buttons">
+                <button onclick="clearForm()" class="reset">Clear</button>
+                <button type="submit" class="cari">Cari</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        feather.replace()
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

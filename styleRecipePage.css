@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap');
+
+:root{
+    --bg : rgb(250, 246, 246);
+    --content-bg : rgb(231, 225, 225);
+    --navbar-color : rgb(250, 208, 208);
+    --navbar-font-clr : rgb(172, 171, 171);
+    --navbar-color-on-hover : rgb(128, 117, 117);
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body{
+    /* min-height: 2000px; */
+    background-color: var(--content-bg);
+}
+.logo img{
+    height: auto;
+    max-width: 9rem;
+}
+.navbar{
+    color: var(--navbar-font-clr);
+    display: flex;
+    padding: 0.5rem 3%;
+    background-color: var(--navbar-color);
+    justify-content: space-between;
+    align-items: center;
+}
+.accountInfo .additional p{
+    display: inline-block;
+}
+.accountInfo{
+    display: flex;
+}
+.logo{
+    font-size: 1.8rem;
+    color: var(--navbar-font-clr);
+}
+.navbar .navbar-nav a{
+    display: inline-block;
+    margin: 0 16px;
+    color: var(--navbar-font-clr);
+    padding: 10px 5px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+}
+.navbar .navbar-nav a:hover{
+    color: var(--navbar-color-on-hover);
+    transition: 0.5s ease-out;
+    letter-spacing: 2px;
+}
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.1rem solid var(--navbar-color-on-hover);
+    transform: scaleX(0);
+    transition: 0.2s;
+}
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(1);
+}
+.dropdown-content-about{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    max-width: 12rem;
+    transform: translateX(130%);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content-about a{
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown{
+    overflow: hidden;
+    display: inline;
+}
+.dropdown:hover .dropdown-content-about{
+    display: block;
+}
+.signIN{
+    color: var(--navbar-font-clr);
+    margin-left: 0.5rem;
+    margin-right: 0.8rem;
+}
+.signIN:hover{
+    cursor: pointer;
+    color: rgb(47, 0, 255);
+}
+.signUp{
+    display: inline;
+    color: white;
+    background-color: green;
+    width: 6rem;
+    height: 2.5rem;
+    margin-left: 0.7rem;
+    border: 1px solid wheat;
+}
+.signUp:hover{
+    cursor: pointer;
+    color: yellow;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    padding: 0;
+}
+.container .left-sidebar{
+    width: auto;
+    padding: 10px;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+.nama-masakan{
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+.left-sidebar table{
+    text-align: left;
+    margin: 0 auto;
+}
+.left-sidebar #button-gizi{
+    margin-top: 3rem;
+    background-color: green;
+    width: auto;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+#button-gizi:hover, #button-gizi:focus{
+    box-shadow: inset 0 -3.5em 0 0 lightgreen, 5px 10px 20px #5557;
+    transition: 0.25s ease-in;
+    letter-spacing: 1.5px;
+    color: black;
+}
+.container{
+    margin-bottom: 10rem;
+}
+.container .right-sidebar{
+    width: 700px;
+    padding: 10px;
+}
+.container .content{
+    flex-grow: 1;
+    padding: 10px;
+}
+.container .content ol{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+.comment .title{
+    display: flex;
+}
+.comment .title h3{
+    margin-left: 1rem;
+}
+.comment{
+    margin-top: 10rem;
+}
+.comment-section{
+    margin-top: 1rem;
+    background: #d3d2d2;
+    border-radius: 10px;
+    padding: 1.7rem 1.3rem;
+}
+.commenter{
+    display: flex;
+    margin-bottom: 1.3rem;
+}
+.pp-commenter{
+    height: auto;
+    max-width: 10%;
+    border-radius: 70%;
+}
+.commenter-details{
+    margin-left: 1rem;
+}
+.commenter-details h5{
+    font-weight: 300;
+}
+.commenter-details span{
+    font-weight: bold;
+}
+.comment-msg{
+    background: #c0b4b4;
+    font-size: smaller;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+}
+.user-comment{
+    display: inline;
+}
+.user-pp{
+    width: auto;
+    height: auto;
+    max-height: 2.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+.user-comment input{
+    width: 200%;
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 10px;
+}
+.user-comment button{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+}
+.user-comment form{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: -1rem;
+}
+.recipe-img{
+    width: auto;
+    height: auto;
+    /* somewhere between 20-30rem */
+    max-height: 20rem;
+    border-radius: 10%;
+    box-shadow: 10px 20px 35px #5557;
+    margin-bottom: 2rem;
+    margin-right: 0;
+}
+.right-sidebar button{
+    display: flex;
+    margin-bottom: 1.5rem;
+    border: none;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+.right-sidebar button:hover{
+    background-color: brown;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 10px;
+}
+.right-sidebar h3{
+    margin-left: 0.5rem;
+}
+.informasi-gizi{
+    margin-left: 19%;
+    justify-content: center;
+    background-color: #eeeded;
+    width: 60%;
+    padding: 3rem 3rem;
+    border-radius: 10px;
+    box-shadow: 10px 20px 35px #5557;
+    display: none;
+}
+.informasi-gizi table{
+    width: 100%;
+}
+.informasi-gizi button{
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 3rem;
+    border-radius: 5px;
+}
+.informasi-gizi.active{
+    position: fixed;
+    top: 25%;
+    display: block;
+    z-index: 999;
+}
+.informasi-gizi button:hover{
+    background-color: red;
+    color: white;
+}
+.futer{
+    bottom: 0;
+    background-color: brown;
+    width: 100%;
+    height: 5rem;
+    padding: 2rem;
+}
+.futer p{
+    color: white;
+    text-align: center;
+}
+
+
+@media (max-width: 1366px){
+    html {
+        font-size: 90%;
+    }
+    #menu{
+        display: none;
+    }
+}
+@media (max-width: 785px){
+    html {
+        font-size: 70%;
+    }
+    .navbar{
+        position: relative;
+    }
+    #menu{
+        display: inline-block;
+        position: absolute;
+        margin-left: 1rem;
+    }
+    .additional{
+        transform: translateX(-15%);
+        font-size: 1.2rem;
+    }
+    .navbar{
+        z-index: 2;
+    }
+    .navbar-nav{
+        position: absolute;
+        right: -100%;
+        top: 0;
+        background-color: white;
+        width: 15rem;
+        height: 100vh;
+        z-index: 1;
+        display: none;
+    }
+    .navbar .navbar-nav a{
+        padding: 0.5rem;
+    }
+    .navbar-nav.menu-active{
+        right: 0;
+        display: inline;
+        transform: translateY(6.5%);
+    }
+    .navbar .navbar-nav a{
+        display: block;
+        margin-bottom: 0.5rem;
+        margin-left: 1.5rem;
+        margin-top: 1.5rem;
+        color: var(--navbar-font-clr);
+        font-size: 1.2rem;
+    }
+    .dropdown-content-about{
+        position: absolute;
+        transform: translateX(20%);
+        transform: translateY(-5%);
+        margin-left: 2rem;
+    }
+    .container{
+        flex-direction: column;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        overflow: hidden;
+    }
+    .container .sidebar{
+        width: 100%;
+    }
+    .container .content{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .right-sidebar h3{
+        font-size: 100%;
+    }
+    .right-sidebar button{
+        display: inline-flex;
+        margin-right: 3rem;
+    }
+    .left-sidebar{
+        width: 100%;
+    }
+}
+@media (max-width: 479px){
+    html {
+        font-size: 55%;
+    }
+}

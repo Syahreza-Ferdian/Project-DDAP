@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+    <link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="styleRecipePage.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="Assets/v2-removebg-preview.png" alt=""></a>
+
+        <div class="navbar-nav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#recipes">Cari Resep</a>
+            <div class="dropdown">
+                <a href="#about" class="about">Tentang Kami</a>
+                <div class="dropdown-content-about">
+                    <a href="aboutUs.html#tujuan-website">Tujuan Website</a>
+                    <a href="aboutUs.html#dev-profile">Profil Pengembang</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accountInfo">
+            <div class="additional">
+                <p>Sudah Punya Akun?</p><a href="loginPage.html" class="signIN">Sign In</a>
+                <a href="signUpPage.html"><button class="signUp">Sign Up</button></a>
+                <a href="#" id="menu"><i data-feather="menu"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <h1 class="nama-masakan">Nasi Goreng Ayam</h1>
+            <img src="Assets/nasi-goreng-kencur-kemangi.jpg" alt="" class="recipe-img">
+            <table>
+                <tr>
+                    <td align="left" width="190rem"><h3>Alat</h3></td>
+                    <td align="left" width="200rem"><h3>Bahan</h3></td>
+                </tr>
+                <tr valign="top">
+                    <td class="alat">
+                        <ol style="padding-right: 2rem">
+                            <li>Wajan atau penggorengan</li>
+                            <li>Spatula atau sendok kayu</li>
+                            <li>Pisau</li>
+                            <li>Piring</li>
+                        </ol>
+                    </td>
+                    <td class="bahan">
+                        <ol>
+                            <li>2 piring nasi putih, dinginkan semalam</li>
+                            <li>200 gram daging ayam atau udang, potong dadu</li>
+                            <li>2 butir telur, kocok lepas</li>
+                            <li>3 siung bawang putih, cincang halus</li>
+                            <li>2 batang daun bawang, iris tipis</li>
+                            <li>2 sendok makan kecap manis</li>
+                            <li>1 sendok makan saus tiram</li>
+                            <li>1 sendok makan kecap inggris</li>
+                            <li>Garam secukupnya</li>
+                            <li>Merica secukupnya</li>
+                            <li>Minyak sayur untuk menggoreng</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+            <button id="button-gizi" onclick="tampilkanGizi()">Tampilkan Detail<br>Informasi Gizi</button>
+        </div>
+        
+        <div class="content">
+            <h3>Langkah Memasak</h3>
+            <ol>
+                <li>Panaskan sedikit minyak sayur di wajan atau penggorengan. Tumis bawang putih hingga harum.</li>
+                <li>Masukkan daging ayam atau udang, tumis hingga berubah warna dan matang.</li>
+                <li>Dorong daging ayam atau udang ke sisi wajan, lalu tuang telur kocok. Aduk-aduk telur hingga setengah matang, lalu aduk rata dengan daging ayam atau udang.</li>
+                <li>Tambahkan nasi putih dingin ke dalam wajan. Aduk rata dengan bahan-bahan yang ada di dalam wajan.</li>
+                <li>Tambahkan kecap manis, saus tiram, dan kecap inggris. Aduk rata hingga nasi terbalut dengan bumbu.</li>
+                <li>Tambahkan garam dan merica secukupnya sesuai selera. Aduk rata dan masak selama beberapa menit hingga nasi terasa panas dan semua bumbu meresap.</li>
+                <li>Terakhir, tambahkan irisan daun bawang. Aduk sebentar, lalu angkat nasi goreng dari wajan.</li>
+                <li>Sajikan nasi goreng panas dengan telur mata sapi di atasnya atau taburan bawang goreng.</li>
+            </ol>
+            <div class="comment">
+                <div class="title">
+                    <i id="comment-logo" data-feather="message-square"></i>
+                    <h3>Komentar</h3>
+                </div>
+                <div class="comment-section">
+                    <div class="commenter">
+                        <img class="pp-commenter" src="Assets/IMG_20230531_123915.jpg" alt="error occured">
+                        <div class="commenter-details">
+                            <h5><span>Syahreza Ferdian </span>memberikan komentar</h5>
+                            <div class="comment-msg">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, illo itaque nihil minima beatae esse facere cumque odit, magnam at, consectetur eligendi quod quas! Eaque earum fugit aperiam eum ratione.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commenter">
+                        <img class="pp-commenter" src="Assets/blank-profile-picture-g653a5e5c9_1280.png" alt="error occured">
+                        <div class="commenter-details">
+                            <h5><span>Dwi Oktaviani </span>memberikan komentar</h5>
+                            <div class="comment-msg">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, illo itaque nihil minima beatae esse facere cumque odit, magnam at, consectetur eligendi quod quas! Eaque earum fugit aperiam eum ratione.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="user-comment">
+                        <form action="#">
+                            <img class="user-pp" src="Assets/blank-profile-picture-g653a5e5c9_1280.png">
+                            <input type="text" name="comment" id="#comment" placeholder="Ketik di sini untuk menambahkan komentar">
+                            <button type="submit"><i data-feather="arrow-right-circle"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-sidebar">
+            <button><i id="bookmark-logo" data-feather="bookmark"></i><h3>Simpan Resep</h3></button>
+            <button><i id="share-logo" data-feather="share-2"></i><h3>Bagikan</h3></button>
+            <button><i id="print-logo" data-feather="printer"></i><h3>Cetak</h3></button>
+        </div>
+    </div>
+
+    <div class="informasi-gizi">
+        <button onclick="hilangkanTampilanGizi()">&#10006;</button>
+        <table border="2px solid black" style="border-collapse: collapse">
+            <tr>
+                <td align="center"><h1>INFORMASI NILAI GIZI</h1></td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.6rem; font-weight: 700;"><h1>JUMLAH PER PORSI</h1></td>
+            </tr>
+            <tr>
+                <td><span>Kalori</span><span style="float: right">350 kalori</span></td>
+            </tr>
+            <tr>
+                <td><span>Karbohidrat</span><span style="float: right">50 gram</span></td>
+            </tr>
+            <tr>
+                <td><span>Protein</span><span style="float: right">15 gram</span></td>
+            </tr>
+            <tr>
+                <td><span>Lemak</span><span style="float: right">10 gram</span></td>
+            </tr>
+            <tr>
+                <td><span>Serat</span><span style="float: right">2 gram</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer class="futer">
+        <p class="futer-text">Copyright Kelompok 1 DDAP TI-E</p>
+    </footer>
+
+    <script>
+        feather.replace()
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
