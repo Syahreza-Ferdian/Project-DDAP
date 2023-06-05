@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 :root{
     --bg : rgb(250, 246, 246);
     --content-bg : rgb(231, 225, 225);
-    --navbar-color : rgb(250, 208, 208);
-    --navbar-font-clr : rgb(172, 171, 171);
+    /* --navbar-color : rgb(250, 208, 208); */
+    --navbar-color : #ffe6f1;
+    --navbar-font-clr : rgb(150, 148, 148);
     --navbar-color-on-hover : rgb(128, 117, 117);
 }
 html{
@@ -42,6 +44,7 @@ body{
 }
 .accountInfo .additional p{
     display: inline-block;
+    font-weight: 600;
 }
 .accountInfo{
     display: flex;
@@ -57,6 +60,7 @@ body{
     padding: 10px 5px;
     border-radius: 5px;
     letter-spacing: 0.5px;
+    font-weight: 600;
 }
 .navbar .navbar-nav a:hover{
     color: var(--navbar-color-on-hover);
@@ -101,10 +105,12 @@ body{
     color: var(--navbar-font-clr);
     margin-left: 0.5rem;
     margin-right: 0.8rem;
+    font-weight: 600;
 }
 .signIN:hover{
     cursor: pointer;
-    color: rgb(47, 0, 255);
+    color: blueviolet;
+    text-decoration: underline;
 }
 .signUp{
     display: inline;
@@ -113,17 +119,15 @@ body{
     width: 6rem;
     height: 2.5rem;
     margin-left: 0.7rem;
-    border: 1px solid wheat;
+    border: 1px solid green;
+    font-weight: 600;
 }
 .signUp:hover{
     cursor: pointer;
-    color: yellow;
+    color: black;
+    box-shadow: inset -6.25rem 0 0 0 lightgreen;
+    transition: 0.1s ease-in;
 }
-/* #menu{
-    position: relative;
-    margin-top: 0.3rem;
-    margin-left: 0.5rem;
-} */
 .landing-page-msg{
     min-height: 100vh;
     display: flex;
@@ -156,13 +160,16 @@ body{
 .tulisan-gede{
     margin-bottom: 0.5rem;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 900;
+    font-family: 'Handlee', cursive;
 }
 .deskripsi{
     margin-bottom: 2rem;
     font-weight: 700;
     font-style: italic;
-    color: rgb(253, 242, 83);
+    /* color: rgb(231, 219, 54); */
+    color: rgb(43, 42, 42);
+    font-size: medium;
 }
 .hero{
     background-color: lightgreen;
@@ -173,6 +180,8 @@ body{
     font-weight: 700;
 }
 .hero:hover{
+    background-color: green;
+    color: white;
     cursor: pointer;
 }
 
@@ -222,7 +231,7 @@ body{
     justify-content: center;
 }
 .recipe-title{
-    max-width: 12rem;
+    /* max-width: 12rem; */
     text-align: center;
     margin-bottom: 1.5rem;
     /* margin-left: 2rem; */
@@ -245,6 +254,7 @@ body{
 }
 .isi-rs{
     display: flex;
+    margin-bottom: 2rem;
 }
 .recipe-title-rs{
     margin-left: 1.5rem;

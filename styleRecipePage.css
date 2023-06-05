@@ -3,12 +3,16 @@
 :root{
     --bg : rgb(250, 246, 246);
     --content-bg : rgb(231, 225, 225);
-    --navbar-color : rgb(250, 208, 208);
-    --navbar-font-clr : rgb(172, 171, 171);
+    /* --navbar-color : rgb(250, 208, 208); */
+    --navbar-color : #ffe6f1;
+    --navbar-font-clr : rgb(150, 148, 148);
     --navbar-color-on-hover : rgb(128, 117, 117);
 }
 html{
     scroll-behavior: smooth;
+}
+a{
+    color: black;
 }
 *{
     text-decoration: none;
@@ -33,9 +37,13 @@ body{
     background-color: var(--navbar-color);
     justify-content: space-between;
     align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .accountInfo .additional p{
     display: inline-block;
+    font-weight: 600;
 }
 .accountInfo{
     display: flex;
@@ -51,6 +59,7 @@ body{
     padding: 10px 5px;
     border-radius: 5px;
     letter-spacing: 0.5px;
+    font-weight: 600;
 }
 .navbar .navbar-nav a:hover{
     color: var(--navbar-color-on-hover);
@@ -95,10 +104,12 @@ body{
     color: var(--navbar-font-clr);
     margin-left: 0.5rem;
     margin-right: 0.8rem;
+    font-weight: 600;
 }
 .signIN:hover{
     cursor: pointer;
-    color: rgb(47, 0, 255);
+    color: blueviolet;
+    text-decoration: underline;
 }
 .signUp{
     display: inline;
@@ -107,17 +118,23 @@ body{
     width: 6rem;
     height: 2.5rem;
     margin-left: 0.7rem;
-    border: 1px solid wheat;
+    border: 1px solid green;
+    font-weight: 600;
 }
 .signUp:hover{
     cursor: pointer;
-    color: yellow;
+    color: black;
+    box-shadow: inset -6.25rem 0 0 0 lightgreen;
+    transition: 0.1s ease-in;
 }
+
+
 .container{
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
     padding: 0;
+    margin-bottom: 10rem;
 }
 .container .left-sidebar{
     width: auto;
@@ -127,9 +144,22 @@ body{
     text-align: center;
 }
 .nama-masakan{
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     width: 100%;
     text-align: center;
+    border-bottom: 1px solid gray;
+}
+.poster-details{
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: small;
+    color: grey;
+    font-weight: 200;
+}
+.poster-details span{
+    font-weight: bold;
+    color: black;
 }
 .left-sidebar table{
     text-align: left;
@@ -150,9 +180,6 @@ body{
     letter-spacing: 1.5px;
     color: black;
 }
-.container{
-    margin-bottom: 10rem;
-}
 .container .right-sidebar{
     width: 700px;
     padding: 10px;
@@ -160,6 +187,10 @@ body{
 .container .content{
     flex-grow: 1;
     padding: 10px;
+}
+.container .content h3{
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
 }
 .container .content ol{
     margin-top: 1rem;
@@ -170,12 +201,13 @@ body{
 }
 .comment .title h3{
     margin-left: 1rem;
+    font-size: large;
 }
 .comment{
     margin-top: 10rem;
 }
 .comment-section{
-    margin-top: 1rem;
+    margin-top: 0rem;
     background: #d3d2d2;
     border-radius: 10px;
     padding: 1.7rem 1.3rem;
@@ -374,6 +406,9 @@ body{
     .container .content{
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+    .right-sidebar{
+        margin-left: 3.5rem;
     }
     .right-sidebar h3{
         font-size: 100%;
