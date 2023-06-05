@@ -330,13 +330,10 @@ body{
         transform: translateX(-15%);
         font-size: 1.2rem;
     }
-    .navbar{
-        z-index: 2;
-    }
     .navbar-nav{
         position: absolute;
         right: -100%;
-        top: 62px;
+        top: 100%;
         background-color: white;
         width: 15rem;
         height: 100vh;

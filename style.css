@@ -36,6 +36,9 @@ body{
     background-color: var(--navbar-color);
     justify-content: space-between;
     align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .accountInfo .additional p{
     display: inline-block;
@@ -285,13 +288,10 @@ body{
         transform: translateX(-15%);
         font-size: 1.2rem;
     }
-    .navbar{
-        z-index: 2;
-    }
     .navbar-nav{
         position: absolute;
         right: -100%;
-        top: 62px;
+        top: 100%;
         background-color: white;
         width: 15rem;
         height: 100vh;
