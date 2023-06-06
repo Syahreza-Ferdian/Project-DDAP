@@ -84,7 +84,6 @@ body{
     max-width: 12rem;
     transform: translateX(130%);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
 }
 .dropdown-content-about a{
     float: none;
@@ -99,6 +98,7 @@ body{
 }
 .dropdown:hover .dropdown-content-about{
     display: block;
+    z-index: 9999;
 }
 .signIN{
     color: var(--navbar-font-clr);
