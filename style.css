@@ -167,8 +167,8 @@ body{
     margin-bottom: 2rem;
     font-weight: 700;
     font-style: italic;
-    /* color: rgb(231, 219, 54); */
-    color: rgb(43, 42, 42);
+    /* color: rgb(43, 42, 42); */
+    color: black;
     font-size: medium;
 }
 .hero{
